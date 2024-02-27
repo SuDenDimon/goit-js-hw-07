@@ -18,6 +18,7 @@ buttonCreate.addEventListener("click", () => {
   }
 });
 function createBoxes(amount) {
+  box.innerHTML = "";
   let step = 30;
   for (let index = 1; index <= amount; index += 1) {
     const elem = document.createElement("div");
@@ -30,4 +31,6 @@ function createBoxes(amount) {
 }
 buttonDestroy.addEventListener("click", () => {
   box.innerHTML = "";
+  input.value = "";
 });
+console.dir(input);
