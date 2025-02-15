@@ -24,3 +24,40 @@ const images = [
     alt: "Lighthouse Coast Sea",
   }
 ];
+
+
+const listGallery = document.querySelector(".gallery");
+
+listGallery.style.display = "flex";
+listGallery.style.flexWrap = "wrap";
+listGallery.style.gap = "15px";
+listGallery.style.listStyle = "none";
+
+images.map(({url, alt}) => {
+
+  const listItem = document.createElement("li");
+  listItem.classList.add("list-item");
+
+  const imageEl = document.createElement("img");
+  imageEl.src = url;
+  imageEl.alt = alt;
+  imageEl.width = 640;
+  
+  listItem.append(imageEl);
+  listGallery.append(listItem);
+}).join("");
+
+
+
+// Напиши скрипт для створення галереї зображень на основі масиву даних. 
+// HTML містить список ul.gallery.
+
+// <ul class="gallery"></ul>
+
+// Використовуй масив об'єктів images для створення елементів <img>, вкладених в <li>.
+
+// Ти можеш створити й додати HTML-елементи, використовуючи document.createElement()
+// і elem.append() або шаблонні рядки і elem.insertAdjacentHTML().
+
+// Усі елементи галереї повинні додаватися в DOM за одну операцію додавання.
+// Додай мінімальне оформлення галереї флексбоксами через CSS класи.
