@@ -33,7 +33,7 @@ listGallery.style.flexWrap = "wrap";
 listGallery.style.gap = "15px";
 listGallery.style.listStyle = "none";
 
-images.map(({url, alt}) => {
+const elements = images.map(({url, alt}) => {
 
   const listItem = document.createElement("li");
   listItem.classList.add("list-item");
@@ -44,8 +44,9 @@ images.map(({url, alt}) => {
   imageEl.width = 640;
   
   listItem.append(imageEl);
-  listGallery.append(listItem);
-}).join("");
+  return listItem;
+});
+  listGallery.append(...elements);
 
 
 
