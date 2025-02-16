@@ -40,7 +40,8 @@ const elements = images.map(({url, alt}) => {
   const imageEl = document.createElement("img");
   imageEl.src = url;
   imageEl.alt = alt;
-  imageEl.width = 640;
+  imageEl.high = 300;
+  imageEl.width = 360;
 
   listItem.append(imageEl);
   return listItem;
